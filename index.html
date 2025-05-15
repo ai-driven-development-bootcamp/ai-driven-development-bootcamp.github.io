@@ -183,7 +183,7 @@
         </div>
         <div class="bg-white bg-opacity-90 px-6 py-4 rounded-lg">
           <p class="text-gray-800 font-medium">
-            <i class="fas fa-bug-slash text-indigo-600 mr-2"></i> 修正・バグ対策工数を50%削減
+            <i class="fas fa-stopwatch text-indigo-600 mr-2"></i> 修正・バグ対策工数を50%削減
           </p>
         </div>
       </div>
@@ -209,7 +209,8 @@
           <div class="highlight-box pl-5 py-2 mb-8">
             <p class="text-xl font-medium text-gray-700">
               現役エンジニア 兼 受講者数30,000名超の<br>
-              <span class="text-indigo-600 font-bold">Udemyベストセラー講師 <a href="#" class="underline">Shota</a></span>
+              <span class="text-indigo-600 font-bold">Udemyベストセラー講師 <a
+                  href="https://www.udemy.com/user/fu-tian-sheng-tai/" class="underline">Shota</a></span>
               がプロデュース
             </p>
           </div>
@@ -241,7 +242,11 @@
         </div>
 
         <div class="relative">
-          <img src="/api/placeholder/600/400" alt="AI駆動開発のイメージ" class="rounded-lg shadow-xl mx-auto">
+          <div class="w-[600px] h-[400px] overflow-hidden rounded-lg shadow-xl mx-auto">
+            <img src="ai-driven-development.jpg" alt="AI駆動開発のイメージ" class="w-full h-full object-cover object-center"
+              style="object-position: 50% 40%;">
+          </div>
+
           <div
             class="absolute -bottom-5 -right-5 bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg transform rotate-3">
             <p class="font-bold">唯一無二の短期集中ブートキャンプ</p>
@@ -423,8 +428,8 @@
               <h3 class="text-xl font-bold text-indigo-600 mb-3">総括編</h3>
               <div class="bg-gray-50 rounded-lg p-5 shadow-sm">
                 <ul class="space-y-2 text-gray-700">
-                  <li class="curriculum-item relative pl-6">AI駆動開発を加速する７つのメソッド36</li>
-                  <li class="curriculum-item relative pl-6">７つのメソッドの開発スタイル別活用ガイド（Cline, GitHub Copilot, Cursor）37</li>
+                  <li class="curriculum-item relative pl-6">AI駆動開発を加速する７つのメソッド</li>
+                  <li class="curriculum-item relative pl-6">７つのメソッドの開発スタイル別活用ガイド（Cline, GitHub Copilot, Cursor）</li>
                 </ul>
               </div>
             </div>
@@ -459,7 +464,7 @@
           <h3 class="text-xl font-bold text-indigo-600 mb-4">フロントエンド</h3>
           <div class="flex items-center space-x-4 mb-4">
             <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-              <i class="fab fa-react text-blue-500 text-2xl"></i>
+              <i class="fas fa-cubes text-blue-600 text-xl"></i>
             </div>
             <div>
               <p class="font-bold text-gray-800">React</p>
@@ -468,7 +473,7 @@
           </div>
           <div class="flex items-center space-x-4 mb-4">
             <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-              <i class="fab fa-js text-blue-700 text-2xl"></i>
+              <i class="fas fa-code text-blue-600 text-xl"></i>
             </div>
             <div>
               <p class="font-bold text-gray-800">TypeScript</p>
@@ -477,7 +482,7 @@
           </div>
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-              <i class="fab fa-css3 text-blue-500 text-2xl"></i>
+              <i class="fas fa-paint-brush text-blue-600 text-xl"></i>
             </div>
             <div>
               <p class="font-bold text-gray-800">Tailwind CSS</p>
@@ -491,7 +496,7 @@
           <h3 class="text-xl font-bold text-indigo-600 mb-4">バックエンド</h3>
           <div class="flex items-center space-x-4 mb-4">
             <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
-              <i class="fab fa-node-js text-green-600 text-2xl"></i>
+              <i class="fas fa-cubes text-green-600 text-xl"></i>
             </div>
             <div>
               <p class="font-bold text-gray-800">Express.js</p>
@@ -504,12 +509,12 @@
             </div>
             <div>
               <p class="font-bold text-gray-800">TypeScript</p>
-              <p class="text-sm text-gray-600">型安全なアプリケーション開発</p>
+              <p class="text-sm text-gray-600">型安全なJavaScriptスーパーセット</p>
             </div>
           </div>
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
-              <i class="fas fa-database text-green-600 text-xl"></i>
+              <i class="fas fa-wrench text-green-600 text-xl"></i>
             </div>
             <div>
               <p class="font-bold text-gray-800">Drizzle ORM</p>
@@ -680,29 +685,103 @@
 
       <div class="max-w-md mx-auto bg-white rounded-xl shadow-xl p-8">
         <h3 class="text-2xl font-bold mb-6 text-center">早割情報を受け取る</h3>
-        <form id="email-form" class="space-y-4">
-          <div>
-            <label for="name" class="block text-gray-700 font-medium mb-2">お名前</label>
-            <input type="text" id="name" name="name"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="山田 太郎" required>
+
+        <!-- Price -->
+        <div class="text-center mb-6">
+          <h2 class="text-4xl font-bold text-gray-900">¥39,800 <span
+              class="text-sm font-normal text-gray-600">(税込)</span></h2>
+          <p class="text-gray-500 text-sm">通常価格 <span class="line-through">¥59,800</span></p>
+
+          <div class="mt-3 bg-yellow-100 p-3 rounded-md">
+            <p class="text-gray-800">
+              <span class="font-bold">早割特典:</span> ¥39,800から更に<span class="font-bold text-red-600">20%OFF</span>
+            </p>
           </div>
-          <div>
-            <label for="email" class="block text-gray-700 font-medium mb-2">メールアドレス</label>
-            <input type="email" id="email" name="email"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="you@example.com" required>
-          </div>
-          <div class="pt-2">
-            <button type="submit"
-              class="w-full gradient-bg text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
-              早割情報を受け取る
-            </button>
-          </div>
-          <p class="text-sm text-gray-500 text-center">
-            ※ご登録いただいたメールアドレスには、コース情報のみをお送りします。
+
+          <p class="mt-2 text-sm text-indigo-600 bg-indigo-50 p-2 rounded">
+            <i class="fas fa-calendar-alt mr-1"></i>2025年夏公開予定 | 公開前の限定キャンペーンです
           </p>
-        </form>
+        </div>
+
+        <!-- Kit Form Start -->
+        <div id="kit-form-container">
+          <!-- Kit Form Code -->
+          <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+          <form action="https://app.kit.com/forms/8056176/subscriptions" class="seva-form formkit-form" method="post"
+            data-sv-form="8056189" data-uid="271acdf04a" data-format="inline" data-version="5"
+            data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;ご登録ありがとうございます！早割情報をお送りしました。&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}"
+            min-width="400 500 600 700 800" style="background-color: transparent; border-radius: 8px;">
+            <div data-style="image">
+              <div data-element="column" class="formkit-column" style="display: none;">
+                <!-- 左カラムは非表示にして、代わりに右側だけ表示する -->
+              </div>
+              <div data-element="column" class="formkit-column" style="padding: 0;">
+                <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                <div data-element="fields" class="seva-fields formkit-fields">
+                  <div class="formkit-field">
+                    <label for="formkit-field-email" class="block text-gray-700 font-medium mb-2">メールアドレス</label>
+                    <input id="formkit-field-email" class="formkit-input" name="email_address" aria-label="メールアドレス"
+                      placeholder="you@example.com" required="" type="email"
+                      style="color: rgb(77, 77, 77); border-color: rgb(227, 227, 227); border-radius: 8px; font-weight: 400;">
+                  </div>
+                  <button data-element="submit" class="formkit-submit formkit-submit"
+                    style="color: rgb(255, 255, 255); background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); border-radius: 8px; font-weight: 700; margin-top: 15px; transition: transform 0.3s ease; width: 100%;">
+                    <div class="formkit-spinner">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                    <span class="">早割情報を受け取る</span>
+                  </button>
+                </div>
+                <div class="formkit-powered-by-convertkit-container"
+                  style="opacity: 0.5; font-size: 12px; margin-top: 10px; text-align: center;">
+                  <a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"
+                    data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank"
+                    rel="nofollow">Built with Kit</a>
+                </div>
+              </div>
+            </div>
+            <style>
+              .formkit-form[data-uid="b04702a8e0"] * {
+                box-sizing: border-box;
+                font-family: 'Noto Sans JP', sans-serif;
+              }
+
+              .formkit-form[data-uid="b04702a8e0"] {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+              }
+
+              /* ボタンのホバーエフェクト */
+              .formkit-form[data-uid="b04702a8e0"] .formkit-submit:hover {
+                transform: scale(1.05);
+              }
+
+              /* フォームスタイル */
+              .formkit-form[data-uid="b04702a8e0"] .formkit-input {
+                padding: 12px 16px;
+                font-size: 16px;
+                width: 100%;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                background-color: #ffffff;
+              }
+
+              .formkit-form[data-uid="b04702a8e0"] .formkit-submit {
+                padding: 0;
+              }
+
+              .formkit-form[data-uid="b04702a8e0"] .formkit-submit>span {
+                padding: 12px 24px;
+                display: block;
+                width: 100%;
+              }
+            </style>
+          </form>
+        </div>
+        <!-- Kit Form End -->
+
       </div>
 
       <div class="mt-16 text-center">
